@@ -1,52 +1,27 @@
+"use strict";
+var APP_ID = "amzn1.ask.skill.76b3bc0d-1f13-4be7-9754-272f28de3ba5";
 var Alexa = require('alexa-sdk');
 var http = require('http');
 
+var constants = require('./constants');
 var states = {
     FEATUREDMODE: '_FEATUREDMODE',
 };
 
 var numberOfResults = 3;
-
-var welcomeMessage = "Welcome to Ask by Legal Shield.";
-
-var welcomeRepromt = "To hear the top featured questions say featured questions, or for free access to more than 1,400 legal questions visit ask dot legal shield dot com or download our mobile app.";
-
-var helpMessage = "For free access to more than 1,400 legal questions visit ask dot legal shield dot com or download our mobile app.";
-
-var noQuestionErrorMessage = "There was an error finding this question, please try again."
-
-var getMoreInfo = "You can tell me a number for more information. For example open number one.";
-
-var goodbyeMessage = "Thank you for asking legal shield.";
-
-var questionIntroMessage = "These are the top featured questions from Ask by Legal Shield.";
-
-var answerIntroMessage = "These are the top matches from Ask by Legal Shield.";
-
-var hearMoreMessage = "To hear the featured questions say featured questions, or to ask a question say... my question is... followed by your question.";
-
-var newline = "\n";
-
 var output = "";
-
 var tag = "<p>Tags:";
-
 var tags = "Tags:";
-
 var slotValue;
-
 var alexa;
-
 var questions = [];
-
 var responseData;
-
 var custom = false;
 
 var newSessionHandlers = {
     'LaunchRequest': function () {
-        output = welcomeMessage + helpMessage;
-        this.emit(':ask', output, welcomeRepromt);
+        output = constants.welcomeMessage + constants.hearMoreMessage;
+        this.emit(':ask', output, constants.welcomeRepromt);
     },
     'getAnswerIntent': function () {
         this.handler.state = states.FEATUREDMODE;
@@ -57,17 +32,17 @@ var newSessionHandlers = {
         this.emitWithState('getFeaturedQuestionsIntent');
     },
     'AMAZON.StopIntent': function () {
-        this.emit(':tell', goodbyeMessage);
+        this.emit(':tell', constants.goodbyeMessage);
     },
     'AMAZON.CancelIntent': function () {
-        this.emit(":tell", goodbyeMessage);
+        this.emit(":tell", constants.goodbyeMessage);
     },
     'SessionEndedRequest': function () {
         this.emit('AMAZON.StopIntent');
     },
     'Unhandled': function () {
-        output = welcomeRepromt;
-        this.emit(':ask', output, welcomeRepromt);
+        output = constants.welcomeRepromt;
+        this.emit(':ask', output, constants.welcomeRepromt);
     },
 };
 
@@ -82,7 +57,7 @@ var startFeaturedHandlers = Alexa.CreateStateHandler(states.FEATUREDMODE, {
             output = "There was a problem with getting data please try again";
         }
         else {
-            output = questionIntroMessage;
+            output = constants.questionIntroMessage;
 
             for (var i = 0; i < numberOfResults; i++) {
                     var title = responseData[i].title;
@@ -102,11 +77,11 @@ var startFeaturedHandlers = Alexa.CreateStateHandler(states.FEATUREDMODE, {
                     questions.push(currentQuestion);
             }
 
-            output += getMoreInfo;
+            output += constants.getMoreInfo;
         }
 
         var cardTitle = "Featured Questions";
-        alexa.emit(':askWithCard', output, getMoreInfo, cardTitle, output);
+        alexa.emit(':askWithCard', output, constants.getMoreInfo, cardTitle, output);
     });
   },
   'getMoreInfoIntent': function () {
@@ -117,11 +92,11 @@ var startFeaturedHandlers = Alexa.CreateStateHandler(states.FEATUREDMODE, {
       if (selectedQuestion) {
           output = selectedQuestion.title + ". " + selectedQuestion.answer + ". " + hearMoreMessage;
           var cardTitle = selectedQuestion.title;
-          var cardContent = selectedQuestion.title + newline + newline + selectedQuestion.answer;
+          var cardContent = selectedQuestion.title + constants.newline + constants.newline + selectedQuestion.answer;
           this.handler.state = states.FEATUREDMODE;
-          this.emit(':askWithCard', output, hearMoreMessage, cardTitle, cardContent);
+          this.emit(':askWithCard', output, constants.hearMoreMessage, cardTitle, cardContent);
       } else {
-          this.emit(':ask', noQuestionErrorMessage);
+          this.emit(':ask', constants.noQuestionErrorMessage);
       }
     },
     'getAnswerIntent': function () {
@@ -135,7 +110,7 @@ var startFeaturedHandlers = Alexa.CreateStateHandler(states.FEATUREDMODE, {
                          output = "There was a problem with getting data please try again";
                      }
                      else {
-                         output = answerIntroMessage;
+                         output = constants.answerIntroMessage;
                          for (var i = 0; i < numberOfResults; i++) {
                                  var title = responseData[i].title;
                                  var answer = responseData[i].answer;
@@ -153,39 +128,39 @@ var startFeaturedHandlers = Alexa.CreateStateHandler(states.FEATUREDMODE, {
                                  currentQuestion = { "number": index, "title": title, "answer": answer};
                                  questions.push(currentQuestion);
                          }
-                         output += getMoreInfo;
+                         output += constants.getMoreInfo;
                      }
                      var cardTitle = "Ask LS";
-                     alexa.emit(':askWithCard', output, getMoreInfo, cardTitle, output);
+                     alexa.emit(':askWithCard', output, constants.getMoreInfo, cardTitle, output);
               });
     },
     'AMAZON.YesIntent': function () {
-        output = helpMessage;
-        this.emit(':ask', output, helpMessage);
+        output = constants.helpMessage;
+        this.emit(':ask', output, constants.helpMessage);
     },
     'AMAZON.NoIntent': function () {
-        output = helpMessage;
-        this.emit(':ask', helpMessage, helpMessage);
+        output = constants.helpMessage;
+        this.emit(':ask', constants.helpMessage, constants.helpMessage);
     },
     'AMAZON.StopIntent': function () {
-        this.emit(':tell', goodbyeMessage);
+        this.emit(':tell', constants.goodbyeMessage);
     },
     'AMAZON.HelpIntent': function () {
-        output = HelpMessage;
-        this.emit(':ask', output, helpMessage);
+        output = constants.helpMessage;
+        this.emit(':ask', output, constants.helpMessage);
     },
     'AMAZON.RepeatIntent': function () {
-        this.emit(':ask', output, helpMessage);
+        this.emit(':ask', output, constants.helpMessage);
     },
     'AMAZON.CancelIntent': function () {
-        this.emit(":tell", goodbyeMessage);
+        this.emit(":tell", constants.goodbyeMessage);
     },
     'SessionEndedRequest': function () {
         this.emit('AMAZON.StopIntent');
     },
     'Unhandled': function () {
-        output = welcomeRepromt;
-        this.emit(':ask', output, welcomeRepromt);
+        output = constants.welcomeRepromt;
+        this.emit(':ask', output, constants.welcomeRepromt);
     }
 });
 

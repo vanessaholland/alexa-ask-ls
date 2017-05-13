@@ -1,17 +1,18 @@
 {
   "name": "ask-by-ls",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Ask by LegalShield",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node src/index.js",
+    "test": "jasmine-node spec/"
   },
   "keywords": [
     "alexa",
     "skill",
     "fact"
   ],
-  "author": "Amazon.com",
+  "author": "VHolland",
   "license": "Apache-2.0",
   "dependencies": {
     "alexa-sdk": "^1.0.9",

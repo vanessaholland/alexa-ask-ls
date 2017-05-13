@@ -1,0 +1,55 @@
+{
+  "intents": [
+    {
+      "intent": "Unhandled"
+    },
+    {
+      "intent": "getFeaturedQuestionsIntent"
+    },
+    {
+      "slots": [
+        {
+          "name": "question",
+          "type": "AMAZON.NUMBER"
+        }
+      ],
+      "intent": "getMoreInfoIntent"
+    },
+    {
+      "slots": [
+        {
+          "name": "answer",
+          "type": "AMAZON.NUMBER"
+        }
+      ],
+      "intent": "getMoreAnswerIntent"
+    },
+    {
+      "slots": [
+        {
+          "name": "Reply",
+          "type": "AMAZON.LITERAL"
+        }
+      ],
+      "intent": "getAnswerIntent"
+    },
+    {
+      "intent": "AMAZON.YesIntent"
+    },
+    {
+      "intent": "AMAZON.NoIntent"
+    },
+    {
+      "intent": "AMAZON.HelpIntent"
+    },
+    {
+      "intent": "AMAZON.RepeatIntent"
+    },
+    {
+      "intent": "AMAZON.StopIntent"
+    },
+    {
+      "intent": "AMAZON.CancelIntent"
+    }
+  ]
+}
