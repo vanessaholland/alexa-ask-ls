@@ -20,6 +20,10 @@ module.exports = {
 
   hearMoreMessage : "To hear the featured questions say featured questions, or to ask a question say... my question is... followed by your question. ",
 
+  dataErrorMessage : "There was a problem with getting data please try again",
+
+  dataProvidedMessage : "Data provided by LegalShield\n\n",
+  
   newline : "\n"
 
 }

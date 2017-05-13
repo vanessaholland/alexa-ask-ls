@@ -1,4 +1,3 @@
-"use strict";
 var APP_ID = "amzn1.ask.skill.76b3bc0d-1f13-4be7-9754-272f28de3ba5";
 var Alexa = require('alexa-sdk');
 var http = require('http');
@@ -52,9 +51,9 @@ var startFeaturedHandlers = Alexa.CreateStateHandler(states.FEATUREDMODE, {
     questions = [];
     httpGet(function (response) {
         responseData = response;
-        var cardContent = "Data provided by LegalShield\n\n";
+        var cardContent = constants.dataProvidedMessage;
         if (responseData == null) {
-            output = "There was a problem with getting data please try again";
+            output = constants.dataErrorMessage;
         }
         else {
             output = constants.questionIntroMessage;
@@ -90,10 +89,9 @@ var startFeaturedHandlers = Alexa.CreateStateHandler(states.FEATUREDMODE, {
 
       var selectedQuestion = questions[index];
       if (selectedQuestion) {
-          output = selectedQuestion.title + ". " + selectedQuestion.answer + ". " + hearMoreMessage;
+          output = selectedQuestion.title + ". " + selectedQuestion.answer + ". " + constants.hearMoreMessage;
           var cardTitle = selectedQuestion.title;
           var cardContent = selectedQuestion.title + constants.newline + constants.newline + selectedQuestion.answer;
-          this.handler.state = states.FEATUREDMODE;
           this.emit(':askWithCard', output, constants.hearMoreMessage, cardTitle, cardContent);
       } else {
           this.emit(':ask', constants.noQuestionErrorMessage);
@@ -105,9 +103,9 @@ var startFeaturedHandlers = Alexa.CreateStateHandler(states.FEATUREDMODE, {
       questions = [];
              httpGet(function(response) {
                  responseData = response;
-                     var cardContent = "Data provided by LegalShield\n\n";
+                     var cardContent = constants.dataProvidedMessage;
                      if (responseData == null) {
-                         output = "There was a problem with getting data please try again";
+                         output = constants.dataErrorMessage;
                      }
                      else {
                          output = constants.answerIntroMessage;
@@ -140,7 +138,7 @@ var startFeaturedHandlers = Alexa.CreateStateHandler(states.FEATUREDMODE, {
     },
     'AMAZON.NoIntent': function () {
         output = constants.helpMessage;
-        this.emit(':ask', constants.helpMessage, constants.helpMessage);
+        this.emit(':ask', helpMessage, constants.helpMessage);
     },
     'AMAZON.StopIntent': function () {
         this.emit(':tell', constants.goodbyeMessage);
@@ -187,15 +185,12 @@ function httpGet(callback) {
         res.on('end', function() {
             try {
                 var parsed = JSON.parse(body);
-                console.log(parsed);
             } catch (err) {
-                console.error('Unable to parse response as JSON', err);
                 return callback(err);
             }
             return callback(parsed);
         });
     }).on('error', function(err) {
-        console.error('Error with the request:', err.message);
         callback(err);
     });
 }
