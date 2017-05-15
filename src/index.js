@@ -30,6 +30,21 @@ var newSessionHandlers = {
         this.handler.state = states.FEATUREDMODE;
         this.emitWithState('getFeaturedQuestionsIntent');
     },
+    'AMAZON.YesIntent': function () {
+        output = constants.helpMessage;
+        this.emit(':ask', output, constants.helpMessage);
+    },
+    'AMAZON.NoIntent': function () {
+        output = constants.helpMessage;
+        this.emit(':ask', output, constants.helpMessage);
+    },
+    'AMAZON.HelpIntent': function () {
+        output = constants.helpMessage;
+        this.emit(':ask', output, constants.helpMessage);
+    },
+    'AMAZON.RepeatIntent': function () {
+        this.emit(':ask', output, constants.helpMessage);
+    },
     'AMAZON.StopIntent': function () {
         this.emit(':tell', constants.goodbyeMessage);
     },
@@ -138,7 +153,7 @@ var startFeaturedHandlers = Alexa.CreateStateHandler(states.FEATUREDMODE, {
     },
     'AMAZON.NoIntent': function () {
         output = constants.helpMessage;
-        this.emit(':ask', helpMessage, constants.helpMessage);
+        this.emit(':ask', output, constants.helpMessage);
     },
     'AMAZON.StopIntent': function () {
         this.emit(':tell', constants.goodbyeMessage);

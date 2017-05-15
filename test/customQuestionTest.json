@@ -1,0 +1,31 @@
+{
+  "session": {
+    "sessionId": "SessionId.44a5369b-9bb1-478c-83d5-c7ccc162f20d",
+    "application": {
+      "applicationId": "amzn1.ask.skill.76b3bc0d-1f13-4be7-9754-272f28de3ba5"
+    },
+    "attributes": {
+      "STATE": "_FEATUREDMODE"
+    },
+    "user": {
+      "userId": "amzn1.ask.account.testaccount1"
+    },
+    "new": false
+  },
+  "request": {
+    "type": "IntentRequest",
+    "requestId": "EdwRequestId.b3045d62-1b33-49ed-a7f6-2b1a3c825d84",
+    "locale": "en-US",
+    "timestamp": "2017-05-15T17:12:48Z",
+    "intent": {
+      "name": "getAnswerIntent",
+      "slots": {
+        "Reply": {
+          "name": "Reply",
+          "value": "what is child support"
+        }
+      }
+    }
+  },
+  "version": "1.0"
+}
