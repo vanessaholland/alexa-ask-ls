@@ -10,9 +10,8 @@ function getEvent(fileName) {
 }
 
 describe('index', function() {
-var event = getEvent('launchRequestTest.json');
     it('LaunchRequest', function() {
-        var launch = index.handler(event);
+        var launch = index.handler(getEvent('launchRequestTest.json'));
         console.log(launch);
         expect(launch).toEqual('Welcome to Ask by Legal Shield. To hear the top featured questions say featured questions, or for free access to more than 1,400 legal questions visit ask dot legal shield dot com or download our mobile app. ')
     });
