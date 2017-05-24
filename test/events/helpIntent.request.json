@@ -1,6 +1,6 @@
 {
   "session": {
-    "sessionId": "SessionId.44a5369b-9bb1-478c-83d5-c7ccc162f20d",
+    "sessionId": "SessionId.7dde1c64-8591-41d1-8525-9b9e47ffaf89",
     "application": {
       "applicationId": "amzn1.ask.skill.76b3bc0d-1f13-4be7-9754-272f28de3ba5"
     },
@@ -8,15 +8,15 @@
     "user": {
       "userId": "amzn1.ask.account.testaccount1"
     },
-    "new": true
+    "new": false
   },
   "request": {
     "type": "IntentRequest",
-    "requestId": "EdwRequestId.84ad8ac4-68f3-4a74-b625-8527a00a890b",
+    "requestId": "EdwRequestId.78ad7adb-ffd8-4425-9d4c-bb2187f2674c",
     "locale": "en-US",
-    "timestamp": "2017-05-15T17:09:59Z",
+    "timestamp": "2017-05-22T21:33:00Z",
     "intent": {
-      "name": "getFeaturedQuestionsIntent",
+      "name": "AMAZON.HelpIntent",
       "slots": {}
     }
   },

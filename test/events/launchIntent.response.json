@@ -1,0 +1,17 @@
+{
+  "version": "1.0",
+  "response": {
+    "outputSpeech": {
+      "type": "SSML",
+      "ssml": "<speak> Welcome to Ask by Legal Shield. To hear the featured questions say featured questions, or to ask a question say... my question is... followed by your question.  </speak>"
+    },
+    "reprompt": {
+      "outputSpeech": {
+        "type": "SSML",
+        "ssml": "<speak> To hear the top featured questions say featured questions, or for free access to more than 1,400 legal questions visit ask dot legal shield dot com or download our mobile app.  </speak>"
+      }
+    },
+    "shouldEndSession": false
+  },
+  "sessionAttributes": {}
+}

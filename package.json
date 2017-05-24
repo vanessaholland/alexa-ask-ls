@@ -5,12 +5,12 @@
   "main": "index.js",
   "scripts": {
     "start": "node src/index.js",
-    "test": "jasmine-node spec/"
+    "test": "mocha"
   },
   "keywords": [
     "alexa",
     "skill",
-    "fact"
+    "legal"
   ],
   "author": "VHolland",
   "license": "Apache-2.0",
@@ -19,6 +19,7 @@
     "ical": "^0.5.0"
   },
   "devDependencies": {
-    "chai": "^3.5.0"
+    "alexa-skill-tester": "^1.1.2",
+    "mocha": "^3.4.1"
   }
 }

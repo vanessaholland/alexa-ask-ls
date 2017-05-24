@@ -1,0 +1,26 @@
+{
+  "session": {
+    "sessionId": "SessionId.5d96988e-2fc3-48c4-9b97-9f923796ed04",
+    "application": {
+      "applicationId": "amzn1.ask.skill.76b3bc0d-1f13-4be7-9754-272f28de3ba5"
+    },
+    "attributes": {
+      "STATE": "_FEATUREDMODE"
+    },
+    "user": {
+      "userId": "amzn1.ask.account.AEOMY3WZFQDDJJFNANO3AGOZ2NE72ZTIIUTIN3OPFPPFJ55Y3RFV5E5IMJOB2PNBD7TF2Y2PUGQQET6ZAB33CJ2D6LYHDNYULTTYGSSEHRGZ56QS4SNFPMAHHKZOL72FFZANN3WYB25WAJC2RRQ6EFXOGBUX7SOSNZZHG7T6NBO6GAODS4JUKLW3NJGF432XPMDDJNBLTAB6J2I"
+    },
+    "new": false
+  },
+  "request": {
+    "type": "IntentRequest",
+    "requestId": "EdwRequestId.92db4924-fe04-433e-8d66-0af2f4b06c81",
+    "locale": "en-US",
+    "timestamp": "2017-05-24T02:32:45Z",
+    "intent": {
+      "name": "getFeaturedQuestionsIntent",
+      "slots": {}
+    }
+  },
+  "version": "1.0"
+}

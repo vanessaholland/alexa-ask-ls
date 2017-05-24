@@ -1,0 +1,24 @@
+{
+  "session": {
+    "sessionId": "SessionId.5d96988e-2fc3-48c4-9b97-9f923796ed04",
+    "application": {
+      "applicationId": "amzn1.ask.skill.76b3bc0d-1f13-4be7-9754-272f28de3ba5"
+    },
+    "attributes": {},
+    "user": {
+      "userId": "amzn1.ask.account.testaccount1"
+    },
+    "new": false
+  },
+  "request": {
+    "type": "IntentRequest",
+    "requestId": "EdwRequestId.d0f5f0b6-6222-4b16-9ff4-26c944a0d976",
+    "locale": "en-US",
+    "timestamp": "2017-05-24T02:14:53Z",
+    "intent": {
+      "name": "getFeaturedQuestionsIntent",
+      "slots": {}
+    }
+  },
+  "version": "1.0"
+}
