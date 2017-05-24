@@ -15,6 +15,7 @@ getFeaturedQuestionsIntent tell me the top featured questions
 getFeaturedQuestionsIntent tell me the top featured questions again
 getMoreInfoIntent open number {question}
 getMoreInfoIntent number {question}
+getMoreInfoIntent {question}
 getAnswerIntent my question is {one|Reply}
 getAnswerIntent my question is {divorced marriage|Reply}
 getAnswerIntent my question is {married children protection|Reply}
