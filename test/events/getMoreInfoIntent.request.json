@@ -1,22 +1,20 @@
 {
   "session": {
-    "sessionId": "SessionId.ee4d35b6-3078-4762-be2b-5aef7861f5f0",
+    "sessionId": "SessionId.64fb5313-30ba-4fce-8234-0f30004b4aab",
     "application": {
       "applicationId": "amzn1.ask.skill.76b3bc0d-1f13-4be7-9754-272f28de3ba5"
     },
-    "attributes": {
-      "STATE": "_FEATUREDMODE"
-    },
+    "attributes": {},
     "user": {
-      "userId": "amzn1.ask.account.AEOMY3WZFQDDJJFNANO3AGOZ2NE72ZTIIUTIN3OPFPPFJ55Y3RFV5E5IMJOB2PNBD7TF2Y2PUGQQET6ZAB33CJ2D6LYHDNYULTTYGSSEHRGZ56QS4SNFPMAHHKZOL72FFZANN3WYB25WAJC2RRQ6EFXOGBUX7SOSNZZHG7T6NBO6GAODS4JUKLW3NJGF432XPMDDJNBLTAB6J2I"
+      "userId": "amzn1.ask.account.testaccount1"
     },
     "new": false
   },
   "request": {
     "type": "IntentRequest",
-    "requestId": "EdwRequestId.6c7e369a-9c3a-4fb9-a42a-86e66ae5552f",
+    "requestId": "EdwRequestId.036da4f3-4846-4fac-8819-b558ac67c14d",
     "locale": "en-US",
-    "timestamp": "2017-05-24T03:17:46Z",
+    "timestamp": "2017-05-24T17:19:45Z",
     "intent": {
       "name": "getMoreInfoIntent",
       "slots": {

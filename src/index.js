@@ -1,11 +1,7 @@
 var APP_ID = "amzn1.ask.skill.76b3bc0d-1f13-4be7-9754-272f28de3ba5";
 var Alexa = require('alexa-sdk');
 var http = require('http');
-
 var constants = require('./constants');
-var states = {
-  FEATUREDMODE: '_FEATUREDMODE',
-};
 
 var numberOfResults = 3;
 var output = "";

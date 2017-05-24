@@ -1,12 +1,10 @@
 {
   "session": {
-    "sessionId": "SessionId.44a5369b-9bb1-478c-83d5-c7ccc162f20d",
+    "sessionId": "SessionId.64fb5313-30ba-4fce-8234-0f30004b4aab",
     "application": {
       "applicationId": "amzn1.ask.skill.76b3bc0d-1f13-4be7-9754-272f28de3ba5"
     },
-    "attributes": {
-      "STATE": "_FEATUREDMODE"
-    },
+    "attributes": {},
     "user": {
       "userId": "amzn1.ask.account.testaccount1"
     },
@@ -14,15 +12,15 @@
   },
   "request": {
     "type": "IntentRequest",
-    "requestId": "EdwRequestId.b3045d62-1b33-49ed-a7f6-2b1a3c825d84",
+    "requestId": "EdwRequestId.bff6095e-6df7-4985-9d69-725d4cd21679",
     "locale": "en-US",
-    "timestamp": "2017-05-15T17:12:48Z",
+    "timestamp": "2017-05-24T17:20:46Z",
     "intent": {
       "name": "getAnswerIntent",
       "slots": {
         "Reply": {
           "name": "Reply",
-          "value": "what is child support"
+          "value": "what is a will"
         }
       }
     }

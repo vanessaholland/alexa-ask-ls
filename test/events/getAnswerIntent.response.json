@@ -3,10 +3,10 @@
   "response": {
     "outputSpeech": {
       "type": "SSML",
-      "ssml": "<speak> These are the top matches from Ask by Legal Shield.  Number 1: What is child support?\n\n; Number 2: What is the difference between an obligor and obligee of child support payments?\n\n; Number 3: What are the consequences of failing to pay child support?;You can tell me a number for more information. For example open number one.  </speak>"
+      "ssml": "<speak> These are the top matches from Ask by Legal Shield.  Number 1: Will the mediator determine what is fair or appropriate in our case?\n\n; Number 2: On what basis will a physician determine that I am incapable of making mental and physical health care decisions?\n\n; Number 3: What are the disadvantages of a living will?\n\n;You can tell me a number for more information. For example open number one.  </speak>"
     },
     "card": {
-      "content": "These are the top matches from Ask by Legal Shield.  Number 1: What is child support?\n\n; Number 2: What is the difference between an obligor and obligee of child support payments?\n\n; Number 3: What are the consequences of failing to pay child support?;You can tell me a number for more information. For example open number one. ",
+      "content": "These are the top matches from Ask by Legal Shield.  Number 1: Will the mediator determine what is fair or appropriate in our case?\n\n; Number 2: On what basis will a physician determine that I am incapable of making mental and physical health care decisions?\n\n; Number 3: What are the disadvantages of a living will?\n\n;You can tell me a number for more information. For example open number one. ",
       "title": "Ask LS",
       "type": "Simple"
     },
@@ -18,7 +18,5 @@
     },
     "shouldEndSession": false
   },
-  "sessionAttributes": {
-    "STATE": "_FEATUREDMODE"
-  }
+  "sessionAttributes": {}
 }

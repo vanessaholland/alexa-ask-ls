@@ -13,7 +13,5 @@
     },
     "shouldEndSession": false
   },
-  "sessionAttributes": {
-    "STATE": "_FEATUREDMODE"
-  }
+  "sessionAttributes": {}
 }
