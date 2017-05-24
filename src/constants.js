@@ -2,6 +2,8 @@
 
 module.exports = {
 
+  app_id : "amzn1.ask.skill.76b3bc0d-1f13-4be7-9754-272f28de3ba5", 
+
   welcomeMessage : "Welcome to Ask by Legal Shield. ",
 
   welcomeRepromt : "To hear the top featured questions say featured questions, or for free access to more than 1,400 legal questions visit ask dot legal shield dot com or download our mobile app. ",
@@ -23,7 +25,7 @@ module.exports = {
   dataErrorMessage : "There was a problem with getting data please try again",
 
   dataProvidedMessage : "Data provided by LegalShield\n\n",
-  
+
   newline : "\n"
 
 }
