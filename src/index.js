@@ -5,8 +5,6 @@ var constants = require('./constants');
 var APP_ID = constants.app_id;
 var numberOfResults = 3;
 var output = "";
-var tag = "<p>Tags:";
-var tags = "Tags:";
 var slotValue;
 var alexa;
 var questions = [];
@@ -33,14 +31,10 @@ var handlers = {
         for (var i = 0; i < numberOfResults; i++) {
           var title = responseData[i].title;
           var answer = responseData[i].answer;
-          if (answer.includes(tag)) {
-            answer = answer.slice(0, answer.indexOf(tag));
-          } else if (answer.includes(tags)) {
-            answer = answer.slice(0, answer.indexOf(tags));
-          }
+          answer.replace(/Tags:[^<]*/g, '');
           var index = i + 1;
 
-          output += " Number " + index + ": " + title + ";";
+          output += " Number " + index + ": " + title;
 
           cardContent += " Number " + index + ".\n";
           cardContent += title + ".\n\n";
@@ -84,14 +78,10 @@ var handlers = {
         for (var i = 0; i < numberOfResults; i++) {
           var title = responseData[i].title;
           var answer = responseData[i].answer;
-          if (answer.includes(tag)) {
-            answer = answer.slice(0, answer.indexOf(tag));
-          } else if (answer.includes(tags)) {
-            answer = answer.slice(0, answer.indexOf(tags));
-          }
+          answer.replace(/Tags:[^<]*/g, '');
           var index = i + 1;
 
-          output += " Number " + index + ": " + title + ";";
+          output += " Number " + index + ": " + title;
 
           cardContent += " Number " + index + ".\n";
           cardContent += title + ".\n\n";
