@@ -43,11 +43,11 @@ var handlers = {
           questions.push(currentQuestion);
         }
 
-        output += constants.getMoreInfo;
+        output += constants.getMoreInfoFeatured;
       }
 
       var cardTitle = "Featured Questions";
-      alexa.emit(':askWithCard', output, constants.getMoreInfo, cardTitle, output);
+      alexa.emit(':askWithCard', output, constants.getMoreInfoFeatured, cardTitle, output);
     });
   },
   'getMoreInfoIntent': function () {
@@ -89,10 +89,10 @@ var handlers = {
           currentQuestion = { "number": index, "title": title, "answer": answer};
           questions.push(currentQuestion);
         }
-        output += constants.getMoreInfo;
+        output += constants.getMoreInfoAnswer;
       }
       var cardTitle = "Ask LS";
-      alexa.emit(':askWithCard', output, constants.getMoreInfo, cardTitle, output);
+      alexa.emit(':askWithCard', output, constants.getMoreInfoAnswer, cardTitle, output);
     });
   },
   'AMAZON.YesIntent': function () {
