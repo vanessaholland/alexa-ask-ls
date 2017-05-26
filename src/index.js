@@ -5,7 +5,7 @@ var constants = require('./constants');
 var APP_ID = constants.app_id;
 var numberOfResults = 3;
 var output = "";
-var slotValue;
+var slotValue = "";
 var alexa;
 var questions = [];
 var responseData;
@@ -18,6 +18,7 @@ var handlers = {
   },
   'getFeaturedQuestionsIntent': function () {
     custom = false;
+    slotValue = "";
     questions = [];
     httpGet(function (response) {
       responseData = response;
@@ -31,7 +32,7 @@ var handlers = {
         for (var i = 0; i < numberOfResults; i++) {
           var title = responseData[i].title;
           var answer = responseData[i].answer;
-          answer.replace(/Tags:[^<]*/g, '');
+          answer= answer.replace(/Tags:[^<]*/g, '');
           var index = i + 1;
 
           output += " Number " + index + ": " + title;
@@ -55,7 +56,7 @@ var handlers = {
 
     var selectedQuestion = questions[index];
     if (selectedQuestion) {
-      output = selectedQuestion.title + ". " + selectedQuestion.answer + ". " + constants.hearMoreMessage;
+      output = selectedQuestion.title + ". " + selectedQuestion.answer + constants.hearMoreMessage;
       var cardTitle = selectedQuestion.title;
       var cardContent = selectedQuestion.title + constants.newline + constants.newline + selectedQuestion.answer;
       this.emit(':askWithCard', output, constants.hearMoreMessage, cardTitle, cardContent);
@@ -78,7 +79,7 @@ var handlers = {
         for (var i = 0; i < numberOfResults; i++) {
           var title = responseData[i].title;
           var answer = responseData[i].answer;
-          answer.replace(/Tags:[^<]*/g, '');
+          answer = answer.replace(/Tags:[^<]*/g, '');
           var index = i + 1;
 
           output += " Number " + index + ": " + title;
