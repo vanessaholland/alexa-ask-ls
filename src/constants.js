@@ -6,15 +6,17 @@ module.exports = {
 
   welcomeMessage : "Welcome to Ask by Legal Shield. ",
 
-  welcomeRepromt : "To hear the top featured questions say featured questions, or you can ask me a quesiton now. For free access to more than 1,400 legal questions visit ask dot legal shield dot com or download our mobile app.",
+  welcomeRepromt : "To hear the top featured questions say featured questions, or you can ask me a question now. For free access to more than 1,400 legal questions visit ask dot legal shield dot com or download our mobile app.",
 
   helpMessage : "For free access to more than 1,400 legal questions visit ask dot legal shield dot com or download our mobile app.",
 
   noQuestionErrorMessage : "There was an error finding this question, please try again.",
 
-  getMoreInfoAnswer : "You can tell me a number for more information. For example open number one. Or to hear the featured questions say.. featured questions.",
+  getMoreInfo : "You can tell me a number for more information. ",
 
-  getMoreInfoFeatured : "You can tell me a number for more information. For example open number one. Or you can ask me a question now.",
+  getMoreInfoAnswer : "For example open number one. Or to hear the featured questions say.. featured questions.",
+
+  getMoreInfoFeatured : "For example open number one. Or you can ask me a question now.",
 
   goodbyeMessage : "Thank you for asking legal shield.",
 

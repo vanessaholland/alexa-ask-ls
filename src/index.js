@@ -10,6 +10,7 @@ var alexa;
 var questions = [];
 var responseData;
 var custom = false;
+var timesThrough = 0;
 
 var handlers = {
   'LaunchRequest': function () {
@@ -38,16 +39,20 @@ var handlers = {
           output += " Number " + index + ": " + title;
 
           cardContent += " Number " + index + ".\n";
-          cardContent += title + ".\n\n";
+          cardContent += title + "\n\n";
           currentQuestion = { "number": index, "title": title, "answer": answer};
           questions.push(currentQuestion);
         }
-
-        output += constants.getMoreInfoFeatured;
+        if (timesThrough < 1) {
+          output += constants.getMoreInfo + constants.getMoreInfoFeatured;
+        } else {
+          output += constants.getMoreInfo;
+        }
+        timesThrough++;
       }
 
       var cardTitle = "Featured Questions";
-      alexa.emit(':askWithCard', output, constants.getMoreInfoFeatured, cardTitle, output);
+      alexa.emit(':askWithCard', output, constants.getMoreInfo, cardTitle, output);
     });
   },
   'getMoreInfoIntent': function () {
@@ -56,7 +61,7 @@ var handlers = {
 
     var selectedQuestion = questions[index];
     if (selectedQuestion) {
-      output = selectedQuestion.title + ". " + selectedQuestion.answer + constants.hearMoreMessage;
+      output = selectedQuestion.title + selectedQuestion.answer + constants.hearMoreMessage;
       var cardTitle = selectedQuestion.title;
       var cardContent = selectedQuestion.title + constants.newline + constants.newline + selectedQuestion.answer;
       this.emit(':askWithCard', output, constants.hearMoreMessage, cardTitle, cardContent);
@@ -84,15 +89,20 @@ var handlers = {
 
           output += " Number " + index + ": " + title;
 
-          cardContent += " Number " + index + ".\n";
-          cardContent += title + ".\n\n";
+          cardContent += " Number " + index + "\n";
+          cardContent += title + "\n\n";
           currentQuestion = { "number": index, "title": title, "answer": answer};
           questions.push(currentQuestion);
         }
-        output += constants.getMoreInfoAnswer;
+        if (timesThrough < 1) {
+          output += constants.getMoreInfo + constants.getMoreInfoAnswer;
+        } else {
+          output += constants.getMoreInfo;
+        }
+        timesThrough++;
       }
       var cardTitle = "Ask LS";
-      alexa.emit(':askWithCard', output, constants.getMoreInfoAnswer, cardTitle, output);
+      alexa.emit(':askWithCard', output, constants.getMoreInfo, cardTitle, output);
     });
   },
   'AMAZON.YesIntent': function () {
@@ -157,6 +167,7 @@ function httpGet(callback) {
     callback(err);
   });
 }
+
 
 String.prototype.trunc =
 function (n) {
