@@ -1,0 +1,22 @@
+{
+  "version": "1.0",
+  "response": {
+    "outputSpeech": {
+      "type": "SSML",
+      "ssml": "<speak> What are the advantages of a limited liability company (LLC)?\n\n. <p>A limited liability company (LLC) is a form of business organization that combines some of the benefits of a corporation with some of the benefits of a sole proprietorship. The advantages of an LLC depend upon the law of the state in which the company is formed. Generally, owners of an LLC enjoy limited personal liability for mistakes or misconduct of the business that owners of corporations enjoy. However, LLC owners are not subject to the same tax implications as a corporation. Further, LLCs offer owners significant flexibility to determine how the business is going to be managed and how income is going to be allocated among the owners.</p> <p></p>To hear the featured questions say featured questions, or to ask a question say your quesiton now..  </speak>"
+    },
+    "card": {
+      "content": "What are the advantages of a limited liability company (LLC)?\n\n\n\n<p>A limited liability company (LLC) is a form of business organization that combines some of the benefits of a corporation with some of the benefits of a sole proprietorship. The advantages of an LLC depend upon the law of the state in which the company is formed. Generally, owners of an LLC enjoy limited personal liability for mistakes or misconduct of the business that owners of corporations enjoy. However, LLC owners are not subject to the same tax implications as a corporation. Further, LLCs offer owners significant flexibility to determine how the business is going to be managed and how income is going to be allocated among the owners.</p> <p></p>",
+      "title": "What are the advantages of a limited liability company (LLC)?\n\n",
+      "type": "Simple"
+    },
+    "reprompt": {
+      "outputSpeech": {
+        "type": "SSML",
+        "ssml": "<speak> To hear the featured questions say featured questions, or to ask a question say your quesiton now..  </speak>"
+      }
+    },
+    "shouldEndSession": false
+  },
+  "sessionAttributes": {}
+}

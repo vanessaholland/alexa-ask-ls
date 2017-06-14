@@ -1,0 +1,22 @@
+{
+  "version": "1.0",
+  "response": {
+    "outputSpeech": {
+      "type": "SSML",
+      "ssml": "<speak> These are the top matches from Ask by Legal Shield.  Number 1: What is child support?\n\n Number 2: What is the difference between an obligor and obligee of child support payments?\n\n Number 3: What are the consequences of failing to pay child support?You can tell me a number for more information. For example open number one. Or to hear the featured questions say.. featured questions.  </speak>"
+    },
+    "card": {
+      "content": "These are the top matches from Ask by Legal Shield.  Number 1: What is child support?\n\n Number 2: What is the difference between an obligor and obligee of child support payments?\n\n Number 3: What are the consequences of failing to pay child support?You can tell me a number for more information. For example open number one. Or to hear the featured questions say.. featured questions. ",
+      "title": "Ask LS",
+      "type": "Simple"
+    },
+    "reprompt": {
+      "outputSpeech": {
+        "type": "SSML",
+        "ssml": "<speak> You can tell me a number for more information. For example open number one. Or to hear the featured questions say.. featured questions.  </speak>"
+      }
+    },
+    "shouldEndSession": false
+  },
+  "sessionAttributes": {}
+}

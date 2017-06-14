@@ -1,0 +1,17 @@
+{
+  "version": "1.0",
+  "response": {
+    "outputSpeech": {
+      "type": "SSML",
+      "ssml": "<speak> For free access to more than 1,400 legal questions visit ask dot legal shield dot com or download our mobile app.  </speak>"
+    },
+    "reprompt": {
+      "outputSpeech": {
+        "type": "SSML",
+        "ssml": "<speak> For free access to more than 1,400 legal questions visit ask dot legal shield dot com or download our mobile app.  </speak>"
+      }
+    },
+    "shouldEndSession": false
+  },
+  "sessionAttributes": {}
+}

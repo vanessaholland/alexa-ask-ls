@@ -1,0 +1,35 @@
+Unhandled I don't know
+Unhandled not sure
+Unhandled none of these
+Unhandled none
+getFeaturedQuestionsIntent featured questions
+getFeaturedQuestionsIntent for the featured questions
+getFeaturedQuestionsIntent for todays featured questions
+getFeaturedQuestionsIntent what are the top featured questions
+getFeaturedQuestionsIntent what are the featured questions
+getFeaturedQuestionsIntent tell me the featured questions
+getFeaturedQuestionsIntent tell me the top featured questions
+getMoreInfoIntent open number {question}
+getMoreInfoIntent number {question}
+getAnswerIntent {words|Reply}
+getAnswerIntent {divorced marriage|Reply}
+getAnswerIntent {married children protection|Reply}
+getAnswerIntent {living right rights revoke|Reply}
+getAnswerIntent {i need more questions please|Reply}
+getAnswerIntent {can you think of another example|Reply}
+getAnswerIntent {this is harder than anyone could guess|Reply}
+getAnswerIntent {move forward jump back how long should be|Reply}
+getAnswerIntent {why did i think this was a good idea|Reply}
+getAnswerIntent {how did a car get a traffic ticket last week|Reply}
+getAnswerIntent {what is the advance directive someone can think of child support|Reply}
+getAnswerIntent {a will power of attorney legal healthcare proxy law firm divorce arrest|Reply}
+getAnswerIntent {court adoption the baby is yelling so mad police i need advice|Reply}
+getAnswerIntent {so many examples attorney file separation retirement what else landlord property wreck car violation|Reply}
+getAnswerIntent {legal matter expert judge trial benefits sick maternity medical emergency lawyer cash money paycheck salary|Reply}
+getAnswerIntent {this is a long settlement adoption rules law i hope this works union marriage civil case|Reply}
+getAnswerIntent {a really fun renters is fiduciary longer is relationship and causation common law marriage state done|Reply}
+getAnswerIntent {rent work this is crazy animal pet abuse abandonment free shelter find food clothing president school labor factory|Reply}
+getAnswerIntent {my situation ask injury expert find my social security card lost drivers license test paternity child baby kid visitation|Reply}
+getAnswerIntent {support funds management boss supervisor foreign practice medicine sue lawsuit small claims jury duty juror guilty innocent family families|Reply}
+getAnswerIntent {view outlook show change move lost found property will dies collect death inherit inheritance trust fund mutual lease sublease living dying|Reply}
+getAnswerIntent {company corporation owed owes customer complaint violate violation criminal arrested enforcement officer drug estate courthouse civil join military spouse partner insurance coverage|Reply}
