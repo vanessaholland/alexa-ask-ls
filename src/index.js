@@ -44,7 +44,7 @@ var handlers = {
           questions.push(currentQuestion);
         }
         if (timesThrough < 1) {
-          output += constants.getMoreInfo + constants.getMoreInfoFeatured;
+          output += constants.getMoreInfo;
         } else {
           output += constants.getMoreInfo;
         }
@@ -82,27 +82,21 @@ var handlers = {
       else {
         output = constants.answerIntroMessage;
         for (var i = 0; i < numberOfResults; i++) {
-          var title = responseData[i].title;
-          var answer = responseData[i].answer;
-          answer = answer.replace(/Tags:[^<]*/g, '');
-          var index = i + 1;
+                var title = responseData[i].title;
+                var answer = responseData[i].answer;
+                answer = answer.replace(/Tags:[^<]*/g, '');
+                var index = i + 1;
 
-          output += " Number " + index + ": " + title;
+                output += " Number " + index + " " + title;
 
-          cardContent += " Number " + index + "\n";
-          cardContent += title + "\n\n";
-          currentQuestion = { "number": index, "title": title, "answer": answer};
-          questions.push(currentQuestion);
+                cardContent += " Number " + index + "\n";
+                cardContent += title + "\n\n";
+                currentQuestion = { "number": index, "title": title, "answer": answer};
+                questions.push(currentQuestion);
         }
-        if (timesThrough < 1) {
-          output += constants.getMoreInfo + constants.getMoreInfoAnswer;
-        } else {
-          output += constants.getMoreInfo;
-        }
-        timesThrough++;
       }
       var cardTitle = "Ask LS";
-      alexa.emit(':askWithCard', output, constants.getMoreInfo, cardTitle, output);
+      alexa.emit(':tellWithCard', output, constants.getMoreInfo, cardTitle, output);
     });
   },
   'AMAZON.YesIntent': function () {

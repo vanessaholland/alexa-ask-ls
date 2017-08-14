@@ -6,7 +6,7 @@ module.exports = {
 
   welcomeMessage : "Welcome to Ask by Legal Shield. ",
 
-  welcomeRepromt : "To hear the top featured questions say featured questions, or you can ask me a question now. For free access to more than 1,400 legal questions visit ask dot legal shield dot com or download our mobile app.",
+  welcomeRepromt : "You can ask me a question now. Or free access to more than 1,400 legal questions visit ask dot legal shield dot com or download our mobile app.",
 
   helpMessage : "For free access to more than 1,400 legal questions visit ask dot legal shield dot com or download our mobile app.",
 
@@ -14,7 +14,7 @@ module.exports = {
 
   getMoreInfo : "You can tell me a number for more information. ",
 
-  getMoreInfoAnswer : "For example open number one. Or to hear the featured questions say.. featured questions.",
+  getMoreInfoAnswer : "For example open number one",
 
   getMoreInfoFeatured : "For example open number one. Or you can ask me a question now.",
 
@@ -24,7 +24,7 @@ module.exports = {
 
   answerIntroMessage : "These are the top matches from Ask by Legal Shield. ",
 
-  hearMoreMessage : "To hear the featured questions say.. featured questions, or you can ask me a question now.",
+  hearMoreMessage : "You can ask me a question or to hear the featured questions say.. featured questions.",
 
   dataErrorMessage : "There was a problem with getting data please try again",
 
