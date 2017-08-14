@@ -1,0 +1,22 @@
+{
+  "version": "1.0",
+  "response": {
+    "outputSpeech": {
+      "type": "SSML",
+      "ssml": "<speak> These are the top featured questions from Ask by Legal Shield.  Number 1: What are the advantages of a limited liability company (LLC)?\n\n Number 2: Can I collect child support from an out-of-state parent? Number 3: How do I file for divorce?\n\nYou can tell me a number for more information. For example open number one. Or to hear the featured questions say.. featured questions.  </speak>"
+    },
+    "card": {
+      "content": "These are the top featured questions from Ask by Legal Shield.  Number 1: What are the advantages of a limited liability company (LLC)?\n\n Number 2: Can I collect child support from an out-of-state parent? Number 3: How do I file for divorce?\n\nYou can tell me a number for more information. For example open number one. Or to hear the featured questions say.. featured questions. ",
+      "title": "Featured Questions",
+      "type": "Simple"
+    },
+    "reprompt": {
+      "outputSpeech": {
+        "type": "SSML",
+        "ssml": "<speak> You can tell me a number for more information. For example open number one. Or to hear the featured questions say.. featured questions.  </speak>"
+      }
+    },
+    "shouldEndSession": false
+  },
+  "sessionAttributes": {}
+}
